@@ -1,0 +1,15 @@
+.nav-links {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    background-color: rgb(80, 90, 87);
+}
+
+.nav-links li {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+}
