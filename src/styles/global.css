@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    /* outline: 1px solid red; */
+}

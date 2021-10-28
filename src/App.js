@@ -2,6 +2,7 @@ import { Navbar } from "./Components/nav"
 import { Homepage } from "./Components/home"
 import { Shoppage } from "./Components/shop"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import './styles/global.css'
 
 const App = () => {
 
