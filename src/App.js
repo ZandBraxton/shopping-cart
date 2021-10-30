@@ -15,7 +15,10 @@ const App = () => {
         <Navbar />
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route exact path="/shop" component={Shoppage} />
+            <Route exact path="/shop">
+            <Shoppage></Shoppage>
+
+            </Route>
             <Route path="/shop/:id" component={Itempage} />
           </Switch>
       </div>
