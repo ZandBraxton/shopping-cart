@@ -1,0 +1,14 @@
+.home-grid-container {
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+    justify-content: center;
+    grid-gap: 250px;
+}
+
+.home-grid-container img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 1px solid rgb(14, 14, 14);
+}

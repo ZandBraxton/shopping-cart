@@ -9,5 +9,17 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
+}
+
+
+.App {
+    background: rgb(174,19,36);
+    background: linear-gradient(180deg, rgba(174,19,36,1) 0%, rgba(190,71,27,1) 25%, rgba(206,123,18,1) 50%, rgba(219,154,23,1) 75%, rgba(233,185,28,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: absolute;
 }
