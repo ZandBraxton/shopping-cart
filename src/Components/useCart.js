@@ -4,8 +4,8 @@ export const useCart = () => {
     const [cart, setCart] = useState([])
 
 
-    const addToCart = (item) => {
-        setCart((prevState) => [...prevState, item])
+    const addToCart = (item, quantity) => {
+        setCart((prevState) => [...prevState, {item, quantity}])
         return cart
     }
 

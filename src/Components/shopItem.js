@@ -1,4 +1,4 @@
-import '../styles/item.css'
+import '../styles/shoppage.css'
 import { Link } from 'react-router-dom'
 
 import React, { useState, useEffect } from 'react'
@@ -23,13 +23,13 @@ export const ShopItem = (props) => {
     }, [props])
 
 return (
-    <div className="item">
+    <div className="shop-item">
         <Link to={`/shop/${item.id}`}>
             <img
-            className="item-img"
+            className="shop-item-img"
             src={item.img} 
             alt="candle"/>
-            <div className="item-container">
+            <div className="shop-item-container">
                 <h4 className="item-name">{item.name}</h4>
             </div>
          </Link>

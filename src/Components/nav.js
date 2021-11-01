@@ -1,10 +1,17 @@
 import '../styles/nav.css'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCart } from '@material-ui/icons'
 
-export const Navbar = () => {
-    
+export const Navbar = ({cart}) => {
+   const [cartCount, setCartCount] = useState(0)
 
+
+   useEffect(() => {
+       setCartCount(cart.length)
+   }, [cart])
+
+   
     return(
         <nav className="nav-bar">
             <ul className="nav-links">
@@ -19,6 +26,7 @@ export const Navbar = () => {
                 className="cart"
                 style={{fontSize: 60}}
                 />
+                {cartCount}
             </ul>
         </nav>
     )

@@ -18,7 +18,6 @@ console.log(items)
 
     return (
         <div>
-            <h1>Shoppage</h1>
             <div className="shop-container">
                 {shopItemComponents}
             </div>
