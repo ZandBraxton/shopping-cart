@@ -4,7 +4,7 @@ import '../styles/shoppage.css'
 
 
 
-export const Shoppage = () => {
+export const Shoppage = ({items}) => {
 
 console.log(items)
     
