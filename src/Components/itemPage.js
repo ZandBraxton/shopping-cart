@@ -10,26 +10,34 @@ export const Itempage = (props) => {
         id: '',
         price: ''
     })
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
 useEffect(() => {
     const itemDetail = props.items.filter((item) => item.id === props.props.match.params.id)
     setItem(itemDetail[0])
-   
+    console.log(quantity)
     console.log(item)
-}, [item, props])
+}, [item, props, quantity])
 
 
 
-const addQuantity = (e) => {
-    setQuantity((prevState) => {
-        const quantity = prevState + 1
-        return quantity
-    })
+const addQuantity = () => {
+    const value = quantity + 1
+    setQuantity(value)
 }
 
-const handleChange = () => {
+const removeQuantity = (e) => {
+    const value = quantity - 1
+    if (value < 1) {
+        setQuantity(1)
+    } else {
+        setQuantity(value)
+    }
+}
 
+const handleChange = (event) => {
+    const value = parseInt(event.target.value)
+    setQuantity(value)
 }
 
 
@@ -42,8 +50,9 @@ const handleChange = () => {
             alt={item.name}
             />
             <div>
-                <Remove/>
+                <Remove onClick={removeQuantity}/>
                     <input
+                    type="number"
                     className="item-quantity"
                     value={quantity}
                     onChange={handleChange}
