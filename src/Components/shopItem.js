@@ -24,7 +24,9 @@ export const ShopItem = (props) => {
 
 return (
     <div className="shop-item">
-        <Link to={`/shop/${item.id}`}>
+        <Link 
+        style={{textDecoration: "none"}}
+        to={`/shop/${item.id}`}>
             <img
             className="shop-item-img"
             src={item.img} 

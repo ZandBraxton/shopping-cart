@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCart } from '@material-ui/icons'
 
-export const Navbar = ({cart}) => {
+export const Navbar = ({cart, setIsVisable}) => {
    const [cartCount, setCartCount] = useState(0)
 
 
@@ -11,6 +11,7 @@ export const Navbar = ({cart}) => {
        setCartCount(cart.length)
    }, [cart])
 
+  
    
     return(
         <nav className="nav-bar">
@@ -25,6 +26,7 @@ export const Navbar = ({cart}) => {
                 <ShoppingCart 
                 className="cart"
                 style={{fontSize: 60}}
+                onClick={() => setIsVisable(v => !v)}
                 />
                 {cartCount}
             </ul>

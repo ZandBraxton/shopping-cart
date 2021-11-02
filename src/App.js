@@ -3,17 +3,37 @@ import { Homepage } from "./Components/home"
 import { Shoppage } from "./Components/shop"
 import { Itempage } from "./Components/itemPage"
 import { useCart } from "./Components/useCart"
+import { CartSidebar } from "./Components/cart"
+import { useState } from "react"
+import { useTransition, animated } from 'react-spring'
 import items from './data/items'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './styles/global.css'
 
 const App = () => {
-  const [cart, addToCart] = useCart()
+  const [cart, totalPrice, addToCart] = useCart()
+  const [isVisable, setIsVisable] = useState(false)
+  const transition = useTransition(isVisable, {
+    from: {opacity: 0},
+    enter: {opacity: 1,},
+    leave: {opacity: 0},
+  })
 
   return (
     <Router>
       <div className="App">
-        <Navbar cart={cart} />
+        <Navbar cart={cart} setIsVisable={setIsVisable}  />
+
+        {/* {isVisable ? <CartSidebar cart={cart} totalPrice={totalPrice}/> : ''} */}
+        {transition((style, item) => 
+        item ? <animated.div style={style} className="cart-sidebar">
+            <CartSidebar 
+              cart={cart} 
+              totalPrice={totalPrice}
+              setIsVisable={setIsVisable} />
+        </animated.div> : ''
+
+        )}
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/shop">
