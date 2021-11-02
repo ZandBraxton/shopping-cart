@@ -15,8 +15,6 @@ export const Itempage = (props) => {
 useEffect(() => {
     const itemDetail = props.items.filter((item) => item.id === props.props.match.params.id)
     setItem(itemDetail[0])
-    console.log(quantity)
-    console.log(item)
 }, [item, props, quantity])
 
 
@@ -61,7 +59,14 @@ const handleChange = (event) => {
             </div>
 
 
-            <button onClick={() => props.addToCart(item, quantity)}>Add to cart</button>
+            <button 
+            onClick={() => props.addToCart(
+                item.name,
+                item.img,
+                item.id,
+                item.price,
+                quantity
+                )}>Add to cart</button>
         </div>
        
     )
