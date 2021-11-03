@@ -16,7 +16,7 @@ export const Cartitem = ({item, incrementItem, decrementItem}) => {
                     className="cart-name">
                     {item.name}
                 </span>
-                <span>${item.price * item.quantity}</span>
+                <span>${Math.round((item.price * item.quantity) * 100) / 100}</span>
                 <div className="qty-handle">
                     <span>Qty: {item.quantity}</span>
                     <Remove onClick={() => decrementItem(item)}></Remove>

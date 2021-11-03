@@ -17,12 +17,18 @@ export const useCart = () => {
             //change item in cart
             // const newCart = cart
             // newCart[index].quantity = item.quantity
-            setCart((prevState) => {
-                const newCart = prevState.filter((obj) => obj.id !== item.id)
-                newCart.push(item)
-                // newCart[index] = item
-                return newCart
-            })
+            setCart(
+                cart.map(obj => obj.id === item.id ?
+                    {...obj, quantity: item.quantity} : obj)
+            )
+
+
+            // setCart((prevState) => {
+            //     const newCart = prevState.filter((obj) => obj.id !== item.id)
+            //     newCart.push(item)
+            //     // newCart[index] = item
+            //     return newCart
+            // })
             console.log("found")
         }
         return cart
@@ -56,7 +62,7 @@ export const useCart = () => {
     useEffect(() => {
         let sum = 0
             cart.map((item) => {
-                sum += item.price * item.quantity
+                sum += Math.round((item.price * item.quantity) * 100) / 100
             })
             setTotalPrice(sum)    
     }, [cart])
