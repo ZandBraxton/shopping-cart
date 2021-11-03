@@ -1,9 +1,9 @@
 export default [
  {
-     name: "Otherland Silk Pajamas",
-     img: "https://media.self.com/photos/5e1de5da6c3d0f0008cef793/master/w_1920%2Cc_limit/01%2520Otherland%2520Silk%2520Pajamas.jpg",
-     id: "Otherland-Silk-Pajamas",
-     price: "12.94",
+     name: "L:A Bruket",
+     img: "https://s1.thcdn.com/productimg/1600/1600/12191153-7264688316838290.jpg",
+     id: "LA-Bruket",
+     price: "18.94",
  },
  {
     name: "Baltic Amber",
@@ -40,11 +40,11 @@ export default [
     price: "12.94",
 },
 {
-    name: "Diptyque Feu de Bois",
-    img: "https://media.self.com/photos/5e1dfd2f6c3d0f0008cef7be/master/w_1920%2Cc_limit/15%2520Diptyque%2520Feu%2520de%2520Bois%2520Candle.jpg",
-    id: "Diptyque-Feu-de-Bois",
+    name: "Oak Room Sea Salt & Jasmine",
+    img: "https://media.kohlsimg.com/is/image/kohls/3479146?wid=1200&hei=1200&op_sharpen=1",
+    id: "Oak-Room-Sea-Salt-&-Jasmine",
     quantity: "1",
-    price: "14.94",
+    price: "17.94",
 },
 {
     name: "Golden Cedar",

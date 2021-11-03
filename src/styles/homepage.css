@@ -1,15 +1,61 @@
+
+.home-background-wrapper {
+    background-image: url(https://wallpaperaccess.com/full/1555890.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background-color: black;
+}
+
+
 .home-grid-container {
     display: flex;
     flex-flow: row;
     margin: auto;
-    justify-content: center;
-    grid-gap: 250px;
-    margin-top: 7em;
+    width: 75em;
+    justify-content: flex-end;
+    grid-gap: 5em;
+    margin-top: 3em;
+    margin-right: 2em;
 }
 
+.title {
+    height: auto;
+    width: 50%;
+    padding: 0.2em 0;
+    margin: 1em 1em 0 auto;
+    font-size: 5.4rem;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    /* outline: 1px solid red; */
+    font-family: 'Gentium Book Basic', serif;
+    color: white;
+}
 .home-grid-container img {
-    width: 500px;
-    height: 500px;
+    width: 31.25em;
+    height: 31.25em;
     object-fit: cover;
     border: 1px solid rgb(14, 14, 14);
+}
+
+.home-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: white;
+    border: 1px solid rgba(18,18,18,0.76);
+}
+
+.home-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.home-item-name {
+    font-size: 2rem;
+    margin: 0.2em auto 0.5em auto;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+
 }

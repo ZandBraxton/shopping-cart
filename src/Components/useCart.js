@@ -14,22 +14,11 @@ export const useCart = () => {
             console.log('not found')
             setCart((prevState) => [...prevState, item])
         } else {
-            //change item in cart
-            // const newCart = cart
-            // newCart[index].quantity = item.quantity
+            //if item already in cart, set new quantity
             setCart(
                 cart.map(obj => obj.id === item.id ?
                     {...obj, quantity: item.quantity} : obj)
             )
-
-
-            // setCart((prevState) => {
-            //     const newCart = prevState.filter((obj) => obj.id !== item.id)
-            //     newCart.push(item)
-            //     // newCart[index] = item
-            //     return newCart
-            // })
-            console.log("found")
         }
         return cart
     }
