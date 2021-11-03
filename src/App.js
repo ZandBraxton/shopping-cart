@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './styles/global.css'
 
 const App = () => {
-  const [cart, totalPrice, addToCart] = useCart()
+  const [cart, totalPrice, addToCart, incrementItem, decrementItem] = useCart()
   const [isVisable, setIsVisable] = useState(false)
   const transition = useTransition(isVisable, {
     from: {opacity: 0},
@@ -22,7 +22,10 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Navbar cart={cart} setIsVisable={setIsVisable}  />
+        <Navbar 
+          cart={cart} 
+          setIsVisable={setIsVisable}
+          />
 
         {/* {isVisable ? <CartSidebar cart={cart} totalPrice={totalPrice}/> : ''} */}
         {transition((style, item) => 
@@ -30,9 +33,10 @@ const App = () => {
             <CartSidebar 
               cart={cart} 
               totalPrice={totalPrice}
-              setIsVisable={setIsVisable} />
+              setIsVisable={setIsVisable}
+              incrementItem={incrementItem}
+              decrementItem={decrementItem} />
         </animated.div> : ''
-
         )}
           <Switch>
             <Route exact path="/" component={Homepage} />

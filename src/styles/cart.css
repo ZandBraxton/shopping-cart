@@ -20,13 +20,6 @@
     align-items: center;
 }
 
-
-.cart-img {
-    margin-left: 2em;
-    width: 100px;
-    height: 100px;
-}
-
 .cart-item-info {
     display: flex;
     flex-flow: column;
@@ -35,6 +28,21 @@
     margin-left: 2em;
     color: white;
     gap: 0.5em;
+}
+
+
+.cart-img {
+    margin-left: 2em;
+    width: 100px;
+    height: 100px;
+}
+
+.qty-handle {
+    display: flex;
+}
+
+.qty-handle span {
+    margin-right: 1em;
 }
 
 

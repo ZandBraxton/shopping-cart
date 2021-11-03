@@ -1,6 +1,8 @@
+import { Remove } from "@material-ui/icons"
+import { Add } from "@material-ui/icons"
 import '../styles/cart.css'
 
-export const Cartitem = ({item}) => {
+export const Cartitem = ({item, incrementItem, decrementItem}) => {
 
     return (
         <div className="cart-item-container">
@@ -15,7 +17,11 @@ export const Cartitem = ({item}) => {
                     {item.name}
                 </span>
                 <span>${item.price * item.quantity}</span>
-                <span>Qty: {item.quantity}</span>
+                <div className="qty-handle">
+                    <span>Qty: {item.quantity}</span>
+                    <Remove onClick={() => decrementItem(item)}></Remove>
+                    <Add onClick={() => incrementItem (item)}></Add>
+                </div>
             </div>  
             
         </div>

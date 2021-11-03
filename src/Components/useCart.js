@@ -29,10 +29,24 @@ export const useCart = () => {
     }
 
 
-    const showCart = () => {
-        
+    const incrementItem = (item) => {
+        setCart(
+            cart.map(obj => obj.id === item.id ?
+                {...obj, quantity: obj.quantity + 1} : obj)
+        )
     }
 
+    const decrementItem = (item) => {
+        if (item.quantity === 1) {
+            setCart(cart.filter(obj => obj.id !== item.id))
+        } else {
+            setCart(
+            cart.map(obj => obj.id === item.id ?
+                {...obj, quantity: obj.quantity - 1} : obj)
+        )
+        }
+        
+    }
  
 
     useEffect(() => {
@@ -46,5 +60,5 @@ export const useCart = () => {
 
 
 
-    return [cart, totalPrice, addToCart]
+    return [cart, totalPrice, addToCart, incrementItem, decrementItem]
 }
