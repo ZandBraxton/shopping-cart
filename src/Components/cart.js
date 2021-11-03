@@ -4,7 +4,14 @@ import { useEffect } from 'react'
 import { Close } from '@material-ui/icons'
 
 
-export const CartSidebar = ({cart, totalPrice, setIsVisable, incrementItem, decrementItem}) => {
+export const CartSidebar = ({
+    cart, 
+    totalPrice, 
+    setIsVisable, 
+    incrementItem, 
+    decrementItem,
+    submitOrder
+}) => {
 
 useEffect(() => {
     console.log('sidebar component')
@@ -27,6 +34,7 @@ useEffect(() => {
          incrementItem={incrementItem}
          decrementItem={decrementItem}></Cartitem>))}
         {totalPrice === 0 ? null : <span className="total-price">Subtotal: ${totalPrice}</span>}
+        <button onClick={submitOrder}>Submit Order</button>
         {/* <span className="total-price">Subtotal: ${totalPrice}</span> */}
         </div>
     )

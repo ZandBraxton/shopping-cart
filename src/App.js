@@ -11,7 +11,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './styles/global.css'
 
 const App = () => {
-  const [cart, totalPrice, addToCart, incrementItem, decrementItem] = useCart()
+  const [
+    cart, 
+    totalPrice, 
+    addToCart, 
+    incrementItem, 
+    decrementItem,
+    submitOrder
+  ] = useCart()
   const [isVisable, setIsVisable] = useState(false)
   const transition = useTransition(isVisable, {
     from: {opacity: 0},
@@ -35,7 +42,8 @@ const App = () => {
               totalPrice={totalPrice}
               setIsVisable={setIsVisable}
               incrementItem={incrementItem}
-              decrementItem={decrementItem} />
+              decrementItem={decrementItem}
+              submitOrder={submitOrder} />
         </animated.div> : ''
         )}
           <Switch>

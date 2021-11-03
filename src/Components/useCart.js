@@ -47,6 +47,10 @@ export const useCart = () => {
         }
         
     }
+
+    const submitOrder = () => {
+        setCart([])
+    }
  
 
     useEffect(() => {
@@ -60,5 +64,12 @@ export const useCart = () => {
 
 
 
-    return [cart, totalPrice, addToCart, incrementItem, decrementItem]
+    return [
+        cart, 
+        totalPrice,
+        addToCart,
+        incrementItem,
+        decrementItem,
+        submitOrder
+    ]
 }
