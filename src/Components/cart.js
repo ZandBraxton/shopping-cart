@@ -1,8 +1,6 @@
 import '../styles/cart.css'
 import { Cartitem } from './cartItem'
-import { useEffect } from 'react'
 import { Close } from '@material-ui/icons'
-
 
 export const CartSidebar = ({
     cart, 
@@ -17,17 +15,18 @@ export const CartSidebar = ({
     return (
         <div className="cart-sidebar">
             <Close 
-            className="close" 
-            style={{fontSize: 40}}
-            onClick={() => setIsVisable(v => !v)}>click</Close>
+                className="close" 
+                style={{fontSize: 40}}
+                onClick={() => setIsVisable(v => !v)}>click
+            </Close>
             {cart.map((item) => (
-        <Cartitem
-            item={item} 
-            key={item.id}
-            incrementItem={incrementItem}
-            decrementItem={decrementItem}
-            deleteItem={deleteItem
-         }></Cartitem>))}
+                <Cartitem
+                    item={item} 
+                    key={item.id}
+                    incrementItem={incrementItem}
+                    decrementItem={decrementItem}
+                    deleteItem={deleteItem
+                }></Cartitem>))}
               {totalPrice === "0.00" ? 
               <span className="empty-cart">You have nothing in your cart</span> 
               : 

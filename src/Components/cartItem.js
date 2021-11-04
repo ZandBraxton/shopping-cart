@@ -10,7 +10,6 @@ export const Cartitem = ({item, incrementItem, decrementItem, deleteItem}) => {
                 className="cart-img"
                 src={item.img}
                 alt={item.name}/>
-
             <div className="cart-item-info">
                 <span 
                     className="cart-name">
@@ -19,14 +18,20 @@ export const Cartitem = ({item, incrementItem, decrementItem, deleteItem}) => {
                 <span>${(item.price * item.quantity).toFixed(2)}</span>
                 <div className="qty-handle">
                     <span>Qty: {item.quantity}</span>
-                    <Remove className="qty-adjustment" onClick={() => decrementItem(item)}></Remove>
-                    <Add className="qty-adjustment" onClick={() => incrementItem(item)}></Add>
+                    <Remove 
+                        className="qty-adjustment" 
+                        onClick={() => decrementItem(item)}
+                    />
+                    <Add 
+                        className="qty-adjustment" 
+                        onClick={() => incrementItem(item)}
+                    />
                 </div>
                 <button 
                 className="delete-item"
-                onClick={() => deleteItem(item)}>Delete</button>
+                onClick={() => deleteItem(item)}
+                >Delete</button>
             </div>  
-            
         </div>
     )
 

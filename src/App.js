@@ -34,9 +34,8 @@ const App = () => {
         <Navbar 
           cart={cart} 
           setIsVisable={setIsVisable}
-          />
-
-        {/* {isVisable ? <CartSidebar cart={cart} totalPrice={totalPrice}/> : ''} */}
+        />
+        {/* transition effect for the cart to fade in */}
         {transition((style, item) => 
         item ? <animated.div style={style} className="cart-sidebar">
             <CartSidebar 
@@ -60,10 +59,10 @@ const App = () => {
                     props={props} 
                     items={items} 
                     addToCart={addToCart}
-                    />
+                />
                   }/>
           </Switch>
-          <Footer></Footer>
+          <Footer/>
       </div>
     </Router>
   )

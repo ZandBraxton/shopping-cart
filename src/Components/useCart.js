@@ -5,13 +5,11 @@ export const useCart = () => {
     const [totalPrice, setTotalPrice] = useState(0)
 
 
-   
     const addToCart = (name, img, id, price, quantity) => {
         const item = {name, img, id, key: id, price, quantity}
         const index = cart.findIndex((obj) => obj.id === item.id)
         if (index === -1) {
-            //push to cart
-            console.log('not found')
+            //if item isn't found, just push to cart
             setCart((prevState) => [...prevState, item])
         } else {
             //if item already in cart, set new quantity
@@ -32,6 +30,7 @@ export const useCart = () => {
     }
 
     const decrementItem = (item) => {
+        //if there's only one quantity left, delete the item from cart
         if (item.quantity === 1) {
             setCart(cart.filter(obj => obj.id !== item.id))
         } else {
@@ -48,10 +47,12 @@ export const useCart = () => {
     }
 
     const submitOrder = () => {
+        //flush cart
         setCart([])
     }
 
     useEffect(() => {
+        //update total price
         let sum = 0
             cart.map((item) => {
                 const value = item.price * item.quantity
