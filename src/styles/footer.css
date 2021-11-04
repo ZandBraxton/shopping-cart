@@ -1,6 +1,9 @@
 
 
 .footer-notes {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     display: flex;
     flex-flow: row;
     height: 3.6em;

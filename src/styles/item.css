@@ -2,26 +2,92 @@
 
 .item-container {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 5em;
+    gap: 10em;
 }
 
-.item-name {
-    font-size: 2.5rem;
+.item-name {    
+    text-align: center;
+    font-size: 4.6rem;
     font-family: 'Merriweather', serif;
     color: black;
+    margin-bottom: 0;
 }
 
+.item-price {
+    margin: 1em 0 1em 0;
+    font-size: 1.6rem;
+}
 
 .item-img {
     height: 500px;
     width: 500px;
 }
 
-.item-quantity {
+.item-info {
+    display: flex;
+    flex-flow: column;
     text-align: center;
+    width: 30em;
+}
+
+.item-quantity-container {
+   display: flex;
+   justify-content: center;
+   gap: 0.2em;
+   margin-bottom: 2em;
+}
+
+.item-quantity {
+    width: 3em;
+    text-align: center;
+}
+
+.item-quantity-adjustment {
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    cursor: pointer;
+}
+
+.item-quantity-adjustment:hover {
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+.add-to-cart {
+    font-size: 2rem;
+    padding: 0.5em;
+    background-color: rgba(18, 18, 18, 1);
+    color: #FBFAF5;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: rgb(37, 37, 37);
+    transform: scale(1.02, 1.02);
+}
+
+.item-description {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: 400;
+    color: black;
+    width: 80%;
+    margin: 4em auto 5em auto;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.item-description li {
+    list-style: none;
+    margin-bottom: 0.4em;
+}
+
+.item-description li::before {
+    content: "• ";
+    color: rgb(0, 0, 0);
 }
 
 input::-webkit-outer-spin-button,

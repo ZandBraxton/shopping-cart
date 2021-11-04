@@ -42,12 +42,6 @@ export const Navbar = ({cart, setIsVisable}) => {
                         ></ShoppingCart>
                         {cartEmpty ? '' : <span className="cart-count">{cartCount}</span>}
                     </div>
-               
-
-                    
-        
-               
-
                 </div>
                
                 
