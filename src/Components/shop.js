@@ -1,4 +1,3 @@
-import items from "../data/items"
 import { ShopItem } from "./shopItem"
 import '../styles/shoppage.css'
 
@@ -6,14 +5,11 @@ import '../styles/shoppage.css'
 
 export const Shoppage = ({items}) => {
 
-console.log(items)
-    
-
-
         const shopItemComponents = items.map((item) => (
-              <ShopItem 
+            <ShopItem 
                 props={item} 
-                key={item.id} />
+                key={item.id} 
+            />
         ))
 
     return (
@@ -23,6 +19,5 @@ console.log(items)
             </div>
         </div>
     )
-    
     
     }

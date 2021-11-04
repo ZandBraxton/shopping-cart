@@ -13,14 +13,14 @@ return (
             />
             <div className="title-container">
                 <h1 className="title">MAKE THE MOST OF EMBER</h1>
-                <Link to="/shop">
+                <Link to="/shopping-cart/shop">
                     <button className="hero-button">Shop now</button>
                 </Link>  
             </div>
         </header>
         <h2 className="home-span">Latest Products</h2>
         <div className="home-grid-container">
-            <Link to={`/shop/LA-Bruket`}>
+            <Link to={`/shopping-cart/shop/LA-Bruket`}>
                 <div className="home-card">
                     <img 
                         src="https://media.osmology.co/wp-content/uploads/2020/01/04194500/Black-Oak-Scented-Candle-by-LA-Bruket-1-500x500.jpg"
@@ -29,7 +29,7 @@ return (
                     <p className="home-item-name">L:A Bruket</p>
                 </div>
             </Link>
-            <Link to={`/shop/Oak-Room-Sea-Salt-&-Jasmine`}>
+            <Link to={`/shopping-cart/shop/Oak-Room-Sea-Salt-&-Jasmine`}>
                 <div className="home-card">
                     <img
                         src="https://i.pinimg.com/originals/62/3a/b6/623ab602df7083190bbc92d128262014.jpg"

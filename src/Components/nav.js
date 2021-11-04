@@ -26,11 +26,11 @@ export const Navbar = ({cart, setIsVisable}) => {
     return(
         <nav className="nav-bar">
             <ul className="nav-links">
-                <Link className="link-line" to="/">
+                <Link className="link-line" to="/shopping-cart/">
                     <li>Home</li>
                 </Link>
                 <h3>CandleCenter</h3>
-                <Link className="link-line" to="/shop">
+                <Link className="link-line" to="/shopping-cart/shop">
                     <li>Shop</li>
                 </Link>
                 <div className="cart-count-container">

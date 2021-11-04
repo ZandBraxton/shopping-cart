@@ -49,11 +49,11 @@ const App = () => {
         </animated.div> : ''
         )}
           <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/shop">
+            <Route exact path="/shopping-cart/" component={Homepage} />
+            <Route exact path="/shopping-cart/shop">
                 <Shoppage items={items}></Shoppage>
             </Route>
-            <Route path="/shop/:id"
+            <Route path="/shopping-cart/shop/:id"
                 render={(props) => 
                 <Itempage 
                     props={props} 

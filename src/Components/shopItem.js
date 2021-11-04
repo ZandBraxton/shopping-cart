@@ -26,7 +26,7 @@ return (
     <div className="shop-item">
         <Link 
         style={{textDecoration: "none"}}
-        to={`/shop/${item.id}`}>
+        to={`/shopping-cart/shop/${item.id}`}>
             <img
             className="shop-item-img"
             src={item.img} 
