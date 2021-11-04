@@ -1,10 +1,23 @@
+import { Link } from 'react-router-dom'
 import '../styles/homepage.css'
 
 export const Homepage = () => {
 
 return (
     <div className="home-background-wrapper">
-        <h1 className="title">Make the Most of Ember</h1>
+        <header className="hero-container">
+            <img
+                className="hero-image" 
+                src="https://trimandathboy.files.wordpress.com/2020/12/adobestock_394225918.jpeg?w=1920&h=768&crop=1"
+                alt="candle-header"/>
+                <div className="title-container">
+                    <h1 className="title">MAKE THE MOST OF EMBER</h1>
+                    <Link to="/shop">
+                        <button className="hero-button">Shop now</button>
+                    </Link>  
+                </div>
+        </header>
+        <h2 className="home-span">Latest Products</h2>
         <div className="home-grid-container">
             <div className="home-card">
                 <img 

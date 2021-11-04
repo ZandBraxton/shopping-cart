@@ -2,6 +2,7 @@ import { Navbar } from "./Components/nav"
 import { Homepage } from "./Components/home"
 import { Shoppage } from "./Components/shop"
 import { Itempage } from "./Components/itemPage"
+import { Footer } from "./Components/footer"
 import { useCart } from "./Components/useCart"
 import { CartSidebar } from "./Components/cart"
 import { useState } from "react"
@@ -60,6 +61,7 @@ const App = () => {
                     />
                   }/>
           </Switch>
+          <Footer></Footer>
       </div>
     </Router>
   )

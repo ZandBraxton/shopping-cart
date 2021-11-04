@@ -1,50 +1,100 @@
 
 .home-background-wrapper {
-    background-image: url(https://wallpaperaccess.com/full/1555890.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    /* background-size: contain;
     min-height: 100%;
     width: 100%;
     height: auto;
-    position: absolute;
-    background-color: black;
+    position: absolute; */
+    background-color: #FBFAF5;
 }
 
+.hero-container {
+    position: relative;
+}
+
+.hero-image {
+    /* position: absolute; */
+    filter: brightness(75%);
+    width: 100%;
+    height: auto;
+}
+
+.title-container {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 4em 4em 0 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 5.4rem;
+    border-bottom:  1px solid #FBFAF5;
+    text-shadow: 2px 2px black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: 400;
+    color: #FBFAF5;
+    margin-bottom: 0.2em;
+}
+.title-container a {
+    text-align: left;
+}
+
+.hero-button {
+    margin-top: 0;
+    font-size: 2.6rem;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    padding-bottom: 0.2em;
+    color: #FBFAF5;
+    background-color: #649f60;
+    font-weight: 400;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.title-container button:hover {
+    background-color: #50804d;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   
+}
+
+.home-span {
+    font-size: 2rem;
+    margin-top: 1em;
+    text-align: center;
+    font-family: 'Gentium Book Basic', serif;
+}
 
 .home-grid-container {
     display: flex;
     flex-flow: row;
     margin: auto;
-    width: 75em;
-    justify-content: flex-end;
-    grid-gap: 5em;
+    width: 100%;
+    justify-content: center;
+    grid-gap: 20em;
     margin-top: 3em;
     margin-right: 2em;
 }
 
-.title {
-    height: auto;
-    width: 50%;
-    padding: 0.2em 0;
-    margin: 1em 1em 0 auto;
-    font-size: 5.4rem;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    /* outline: 1px solid red; */
-    font-family: 'Gentium Book Basic', serif;
-    color: white;
-}
+
+
 .home-grid-container img {
     width: 31.25em;
     height: 31.25em;
     object-fit: cover;
-    border: 1px solid rgb(14, 14, 14);
 }
 
 .home-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     background-color: white;
+    margin-bottom: 3em;
     border: 1px solid rgba(18,18,18,0.76);
 }
 

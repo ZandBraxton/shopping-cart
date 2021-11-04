@@ -1,0 +1,29 @@
+
+
+.footer-notes {
+    display: flex;
+    flex-flow: row;
+    height: 3.6em;
+    background-color: rgba(18, 18, 18, 1);
+    align-items: center;
+    padding-left: 2em;
+    color: grey;
+    gap: 0.5em;
+}
+
+.footer-note {
+    height: auto;
+    font-size: 1rem;
+    color: grey;
+    margin: 0;
+    /* padding: 1.5em 0 0 2em ; */
+}
+
+.copyright {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.gap {
+    margin-right: 1em;
+}
