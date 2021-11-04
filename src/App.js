@@ -18,7 +18,8 @@ const App = () => {
     addToCart, 
     incrementItem, 
     decrementItem,
-    submitOrder
+    submitOrder,
+    deleteItem
   ] = useCart()
   const [isVisable, setIsVisable] = useState(false)
   const transition = useTransition(isVisable, {
@@ -44,7 +45,8 @@ const App = () => {
               setIsVisable={setIsVisable}
               incrementItem={incrementItem}
               decrementItem={decrementItem}
-              submitOrder={submitOrder} />
+              submitOrder={submitOrder}
+              deleteItem={deleteItem} />
         </animated.div> : ''
         )}
           <Switch>

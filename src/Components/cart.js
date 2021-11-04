@@ -10,16 +10,9 @@ export const CartSidebar = ({
     setIsVisable, 
     incrementItem, 
     decrementItem,
-    submitOrder
+    submitOrder,
+    deleteItem
 }) => {
-
-useEffect(() => {
-    console.log('sidebar component')
-}, [cart])
-
-    // const cartComponents = cart.map((item) => (
-    //     <Cartitem item={item} key={item.id}></Cartitem>
-    // ))
 
     return (
         <div className="cart-sidebar">
@@ -29,13 +22,20 @@ useEffect(() => {
             onClick={() => setIsVisable(v => !v)}>click</Close>
             {cart.map((item) => (
         <Cartitem
-         item={item} 
-         key={item.id}
-         incrementItem={incrementItem}
-         decrementItem={decrementItem}></Cartitem>))}
-        {totalPrice === 0 ? null : <span className="total-price">Subtotal: ${totalPrice}</span>}
-        <button onClick={submitOrder}>Submit Order</button>
-        {/* <span className="total-price">Subtotal: ${totalPrice}</span> */}
+            item={item} 
+            key={item.id}
+            incrementItem={incrementItem}
+            decrementItem={decrementItem}
+            deleteItem={deleteItem
+         }></Cartitem>))}
+              {totalPrice === "0.00" ? 
+              <span className="empty-cart">You have nothing in your cart</span> 
+              : 
+              <div className="checkout">
+                <span className="total-price">Subtotal: ${totalPrice}</span>
+                <button className="submit-order" onClick={submitOrder}>Submit Order</button>
+              </div>
+              }
         </div>
     )
 }

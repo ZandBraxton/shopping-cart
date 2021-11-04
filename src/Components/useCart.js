@@ -43,17 +43,21 @@ export const useCart = () => {
         
     }
 
+    const deleteItem = (item) => {
+        setCart(cart.filter(obj => obj.id !== item.id))
+    }
+
     const submitOrder = () => {
         setCart([])
     }
- 
 
     useEffect(() => {
         let sum = 0
             cart.map((item) => {
-                sum += Math.round((item.price * item.quantity) * 100) / 100
+                const value = item.price * item.quantity
+                sum += value 
             })
-            setTotalPrice(sum)    
+            setTotalPrice(sum.toFixed(2))    
     }, [cart])
 
 
@@ -65,6 +69,7 @@ export const useCart = () => {
         addToCart,
         incrementItem,
         decrementItem,
-        submitOrder
+        submitOrder,
+        deleteItem
     ]
 }
