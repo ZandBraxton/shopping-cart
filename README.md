@@ -1,5 +1,4 @@
 Shopping car project for The Odin Project
 
-_Live demo 
-_
+*Live Demo*
 https://zandbraxton.github.io/shopping-cart/
