@@ -32,7 +32,8 @@ return (
             src={item.img} 
             alt="candle"/>
             <div className="shop-item-container">
-                <h4 className="item-name">{item.name}</h4>
+                <h4 className="shop-item-name">{item.name}</h4>
+                <p className="shop-item-price">${item.price}</p>
             </div>
          </Link>
     </div>

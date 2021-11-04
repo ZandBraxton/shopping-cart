@@ -14,11 +14,9 @@ html {
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap');
+
 .App {
-    /* background-image: url(https://wallpaperaccess.com/full/1555890.jpg); */
     background-color: #FBFAF5;
-    /* background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(190,71,27,1) 35%, rgba(206,123,18,1) 65%, rgba(219,154,23,1) 85%, rgba(233,185,28,1) 100%); */
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 100%;
