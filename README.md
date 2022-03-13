@@ -1,4 +1,4 @@
-Shopping car project for The Odin Project
+Shopping cart project for The Odin Project, built using react
 
 ***Live Demo***
 
